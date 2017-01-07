@@ -1,0 +1,14 @@
+body {
+  height: 50em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}

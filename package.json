@@ -1,0 +1,22 @@
+{
+  "name": "trial-exam-web",
+  "version": "1.0.0",
+  "description": "hard exam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ignocius/trial-exam-web.git"
+  },
+  "author": "Rick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ignocius/trial-exam-web/issues"
+  },
+  "homepage": "https://github.com/Ignocius/trial-exam-web#readme",
+  "dependencies": {
+    "mysql": "^2.12.0"
+  }
+}
