@@ -1,16 +1,28 @@
 'use stirct';
 
-module.exports = function caesarShift(shift, text) {
-	var result = "";
-	for (var i = 0; i < text.length; i++) {
-		var c = text.charCodeAt(i);
-		if (c >= 65 && c <=  90) {
-      result += String.fromCharCode((c - 65 + shift) % 26 + 65);  // Uppercase
-		} else if (c >= 97 && c <= 122) {
-      result += String.fromCharCode((c - 97 + shift) % 26 + 97);  // Lowercase
-    } else {
-      result += text.charAt(i);  // Copy
+module.exports = function caesarCipherM(msg, shift) {
+	if (shift < 0) {
+    return caesarShift(msg, shift + 26);
+  }
+
+	var output = '';
+
+	for (var i = 0; i < msg.length; i ++) {
+
+		var c = msg[i];
+
+		if (c.match(/[a-z]/i)) {
+
+			var code = msg.charCodeAt(i);
+
+			if ((code >= 65) && (code <= 90)) {
+        c = msging.fromCharCode(((code - 65 + shift) % 26) + 65);
+
+      } else if ((code >= 97) && (code <= 122)) {
+        c = msging.fromCharCode(((code - 97 + shift) % 26) + 97);
+      }
+		}
+		output += c;
 	}
-	return result;
-  };
+	return output;
 };

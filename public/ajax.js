@@ -6,7 +6,7 @@ var Ajax = function(){
   }
 
   this.decodeData = function(data, callback) {
-    this.open('POST', 'decode',data,  callback);
+    this.open('POST', data, 'decode/', callback);
   }
 
   this.open = function(method, data, resource, callback) {

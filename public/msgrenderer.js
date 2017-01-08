@@ -12,14 +12,14 @@ var CodedMsg = (function() {
     //  li.appendChild(span);
     //  span.textContent = ;
      li.textContent = 'Shift: '+ msg.shift + ' - ' + 'Text: '+ msg.text;
-     console.log(msg);
+    //  console.log(msg);
     })
   }
 
   return {
     init: function(){
       ajax.getData(function(res){
-        console.log(res);
+        // console.log(res);
         messages = res;
         render();
       })
