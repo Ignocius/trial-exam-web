@@ -1,5 +1,6 @@
 'use strict';
 
+var decoder = require('./cipher');
 var express = require('express');
 var bodyParser = require('body-parser')
 var mysql = require('mysql');
@@ -32,14 +33,20 @@ app.get('/decode/all', function (req, res) {
   })
 });
 
+// console.log(decoder(1, 'text'));
 
-app.post("/decode", function decode (req, res) {
+app.post('/decode/', function decode (req, res) {
+  // console.log('dadas');
   connection.query({
   		sql: 'INSERT INTO cipher(shift, text) VALUES(?, ?)',
-  		values: [ req.body.shift, req.body.text]
+  		values: [ decoder(req.body.shift, req.body.text)]
+  		// values: [ 2 , 'yolo']
   	}, function(err, rows, fields) {
-  		if (err) throw err;
-    	res.send(rows);
+  		if (err) {
+        throw err;
+      } else {
+        res.send(rows);
+      }
     });
 });
 
