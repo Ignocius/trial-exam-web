@@ -39,7 +39,7 @@ app.post('/decode/', function decode (req, res) {
   console.log(req.body.text, req.body.shift);
   connection.query({
   		sql: 'INSERT INTO cipher(shift, text) VALUES(?, ?)',
-  		values: [ decoder( req.body.text, req.body.shift)]
+  		values: [ req.param.shift, decoder( req.body.shift, req.body.text)]
   		// values: [ req.body.shift, req.body.text]
   		// values: [ 2 , 'yolo']
   	}, function(err, rows, fields) {

@@ -1,6 +1,6 @@
 'use stirct';
 
-module.exports = function caesarCipherM(msg, shift) {
+module.exports = function caesarCipherM(shift, msg) {
 	if (shift < 0) {
     return caesarShift(msg, shift + 26);
   }
@@ -16,10 +16,10 @@ module.exports = function caesarCipherM(msg, shift) {
 			var code = msg.charCodeAt(i);
 
 			if ((code >= 65) && (code <= 90)) {
-        c = msging.fromCharCode(((code - 65 + shift) % 26) + 65);
+        c = String.fromCharCode(((code - 65 + shift) % 26) + 65);
 
       } else if ((code >= 97) && (code <= 122)) {
-        c = msging.fromCharCode(((code - 97 + shift) % 26) + 97);
+        c = String.fromCharCode(((code - 97 + shift) % 26) + 97);
       }
 		}
 		output += c;
