@@ -50,6 +50,6 @@ app.post('/decode/', function decode (req, res) {
     });
 });
 
-app.listen(3500, function(){
-	console.log('SERVER IS UP AND RUNNIN on port: 3500')
+app.listen(3600, function(){
+	console.log('SERVER IS UP AND RUNNIN on port: 3600')
 });

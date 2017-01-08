@@ -1,21 +1,33 @@
 body {
   height: 50em;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*-ms-align-items: ;
+  align-items: ;-items: center;*/
+  background-image: url('../imgs/backg.jpg');
+  background-position: center;
 }
 
 main {
-  border: 1px solid blue;
+  width: 300px;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 10% auto;
+}
+
+ol li {
+  color: black;
 }
 
 button {
-  width: 20px;
-  height: 20px;
-  background-color: url('button.jpg');
-
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  background-image: url('../imgs/roman.gif');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

@@ -2,15 +2,16 @@ var Ajax = function(){
   this.APIEndpoint = 'http://localhost:3600/';
 
   this.getData = function(callback) {
-    this.open('GET', 'decodeall', false, callback);
+    this.open('GET', false, 'decode/all', callback);
   }
 
-  this.decodeData = function(callback) {
-    this.open('POST', 'playlists', callback);
+  this.decodeData = function(data, callback) {
+    this.open('POST', 'decode',data,  callback);
   }
 
   this.open = function(method, data, resource, callback) {
     var xhr = new XMLHttpRequest();
+    data = (data) ? data : null;
     xhr.open( method, this.APIEndpoint + resource)
 
     if (method !== 'DELETE') {
