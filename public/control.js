@@ -19,7 +19,7 @@ var Control = (function(){
   })
 
   function sendData(collectedData) {
-      
+      fetchData.sendData(collectedData);
       loading.textContent = "";
       // ajax.decodeData(collectedData, function(res){
       // console.log(res);

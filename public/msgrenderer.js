@@ -25,7 +25,7 @@ var CodedMsg = (function() {
 
   return {
     init: function(){
-      messages = fetchData.getData;
+      messages = fetchData.getData();
       console.log(messages);
       // console.log(messages);
       render();
