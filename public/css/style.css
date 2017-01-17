@@ -31,3 +31,16 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.data-reciver {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-reciver span {
+  margin: 10% 0 5% 10%;
+}
+
+/*.hide {
+  display: none;
+}*/

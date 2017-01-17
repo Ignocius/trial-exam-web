@@ -8,6 +8,7 @@ var decoder = require('./cipher');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+// app.use('/', express.static('./public'));
 
 var connection = mysql.createConnection({
       host     : 'localhost',

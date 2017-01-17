@@ -21,7 +21,12 @@ var Ajax = function(){
     xhr.send( JSON.stringify(data));
     xhr.onreadystatechange = function (rsp) {
       if (xhr.readyState === XMLHttpRequest.DONE) {
-        callback( JSON.parse(xhr.response));
+        if ( xhr.status === 200 ) {
+          console.log(xhr.responseText);
+          callback( JSON.parse(xhr.response));
+        } else {
+          alert('There was a problem with the connection!');
+        }
       }
     }
   }
