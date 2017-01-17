@@ -7,14 +7,19 @@ var CodedMsg = (function() {
 
 
   function render(){
-    messages.each(function(msg){
+    messages.then(function(data){
+      console.log(data);
+      data.forEach(function(msg){
+
+    // messages.each(function(msg){
      let li = document.createElement('li');
-    //  let span = document.createElement('span');
+    // //  let span = document.createElement('span');
      list.appendChild(li);
-    //  li.appendChild(span);
-    //  span.textContent = ;
+    // //  li.appendChild(span);
+    // //  span.textContent = ;
      li.textContent = 'Shift: '+ msg.shift + ' - ' + 'Text: '+ msg.text;
     //  console.log(msg);
+      })
     })
   }
 
